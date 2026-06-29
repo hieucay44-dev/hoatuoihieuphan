@@ -49,6 +49,68 @@ const weights = {
     hoa_tuoi: 3,
     loai: 2
 };
+function renderBestSaleCarousel() {
+
+    const container = document.getElementById("best-sale-carousel");
+
+    if (!container) return;
+
+    const bestSale = [...products]
+        .sort((a, b) => b.numsold - a.numsold);
+
+    const perSlide = 4;
+
+    let html = "";
+
+    for (let i = 0; i < bestSale.length; i += perSlide) {
+
+        const group = bestSale.slice(i, i + perSlide);
+
+        html += `
+        <div class="carousel-item ${i === 0 ? "active" : ""}">
+
+            <div class="row g-3">
+
+                ${group.map(item => `
+
+                <div class="col-6 col-md-3">
+
+                    <div class="card h-100">
+
+                        <a href="detail.html?id=${item.id}">
+
+                            <img src="${item.image}"
+                                 class="card-img-top">
+
+                        </a>
+
+                        <div class="card-body text-center">
+
+                            <h6>${item.name}</h6>
+
+                            <div class="text-danger fw-bold price">
+
+                                ${item.price.toLocaleString("vi-VN")} VNĐ
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                `).join("")}
+
+            </div>
+
+        </div>
+        `;
+    }
+
+    container.innerHTML = html;
+
+}
 function hasCommonValue(arr1, arr2) {
 
     if (!Array.isArray(arr1) || !Array.isArray(arr2)) return false;
@@ -591,6 +653,7 @@ async function loadProducts() {
 
                 break;
 
+
             case "Chủ đề":
                 products = products.filter(p => p.chu_de.includes(name));
                 originalProducts = [...products];
@@ -635,6 +698,8 @@ async function loadProducts() {
             originalProducts = [...products];
 
         }
+        renderBestSaleCarousel();
+
         renderProducts();
 
         renderPagination();

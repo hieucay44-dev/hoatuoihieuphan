@@ -34,3 +34,47 @@
     cursor:pointer;
     font-weight:500;
 }
+#bestSaleCarousel .card{
+    border: none;
+    transition: .25s;
+}
+
+#bestSaleCarousel .card:hover{
+    transform: translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+#bestSaleCarousel img{
+    height:220px;
+    object-fit:cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    width:5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    padding:18px;
+}
+
+@media(max-width:768px){
+
+    #bestSaleCarousel img{
+        height:150px;
+    }
+
+}
+.card-img-top{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:contain;
+}
+.carousel-item .row{
+    flex-wrap:nowrap;
+    overflow:hidden;
+}
+.carousel-item .col-6{
+    flex:0 0 50%;
+}
