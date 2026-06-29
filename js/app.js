@@ -1,4 +1,3 @@
-
 async function loadComponent(id, file) {
 
     const element = document.getElementById(id);
