@@ -1,0 +1,92 @@
+/* =======================
+   HEADER
+======================= */
+
+header {
+    background: #fff;
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+
+/* =======================
+   LOGO
+======================= */
+
+#logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* =======================
+   SEARCH BUTTON
+======================= */
+
+.search-button {
+    border: none;
+    background: #28a745;
+    color: #fff;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    transition: 0.2s ease;
+}
+
+.search-button:hover {
+    background: #218838;
+}
+
+/* search width */
+#search {
+    max-width: 600px;
+}
+
+/* =======================
+   CONTACT HEADER
+======================= */
+
+.header-contact {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.header-contact div {
+    margin-bottom: 2px;
+}
+
+.header-contact a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header-contact a:hover {
+    color: #0d6efd;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+.pagination .page-link{
+    color: #198754;
+    border: 1px solid #dee2e6;
+    margin: 0 3px;
+    border-radius: 8px;
+    min-width: 42px;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.pagination .page-link:hover{
+    background: #198754;
+    color: white;
+    border-color: #198754;
+}
+
+.pagination .page-item.active .page-link{
+    background: #198754;
+    border-color: #198754;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination .page-item.disabled .page-link{
+    color: #999;
+}

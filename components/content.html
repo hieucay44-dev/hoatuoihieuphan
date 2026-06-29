@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/content.css" rel="stylesheet">
+
+
+    <title></title>
+</head>
+<body>
+    
+    <div class="container" style="max-width:1200px">
+        <div class="sort-bar mb-4">
+
+            <div class="sort-title">
+                <i class="fas fa-sort"></i>
+                Sắp xếp theo
+            </div>
+
+            <select id="sort-select" class="form-select">
+
+                <option value="">Mặc định</option>
+                <option value="price-asc">Giá: Thấp → Cao</option>
+                <option value="price-desc">Giá: Cao → Thấp</option>
+                <option value="name-asc">Tên A → Z</option>
+                <option value="name-desc">Tên Z → A</option>
+                <option value="sold-desc">Bán chạy nhất</option>
+                <option value="newest">Mới nhất</option>
+
+            </select>
+
+        </div>
+        <div class="row">
+            <div id="product-list" class="row row-cols-5 g-1">
+
+            </div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-12">
+            <nav>
+                <ul id="pagination" class="pagination justify-content-center">
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

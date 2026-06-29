@@ -1,0 +1,56 @@
+#metu {
+  position: fixed;
+  bottom: 20px;   /* cách đáy màn hình */
+  right: 20px;    /* góc phải */
+  z-index: 99999;
+}
+
+.mmt-app {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mmt-menu__item a {
+  text-decoration: none;
+}
+
+.mmt-button {
+  display: flex;
+  align-items: center;
+  background: #ff4da6; /* màu pink giống bạn */
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.mmt-button:hover {
+  transform: translateY(-2px);
+}
+
+.mmt-button img,
+.mmt-button svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+@media (max-width: 768px) {
+  #metu {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .mmt-button__label {
+    display: none; /* chỉ hiện icon */
+  }
+}
+.mmt-button svg,
+.mmt-button img {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+}

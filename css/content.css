@@ -1,0 +1,36 @@
+.sort-bar{
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:10px;
+
+    padding:15px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:20px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.sort-title{
+    font-size:18px;
+    font-weight:600;
+    color:#444;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.sort-title i{
+    color:#28a745;
+}
+
+#sort-select{
+    width:240px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+}
